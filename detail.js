@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const borderCountriesContainer = document.querySelector(".border-countries");
   const changeMode = document.querySelector(".mode");
 
-  let currMode;
+  let currMode = localStorage.getItem("pageMode") || "light";
 
   // Function to get the native name
   const native = (country) => {
@@ -89,6 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
     currMode = currMode === "light" ? "dark" : "light";
     document.body.classList.toggle("dark", currMode === "dark");
-    // localStorage.setItem("pageMode", currMode);
+    localStorage.setItem("pageMode", currMode);
   });
 });
