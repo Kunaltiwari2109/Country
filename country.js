@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(currMode);
 
     //store  currMode in local storage
-    // localStorage.setItem("pageMode", currMode);
+    localStorage.setItem("pageMode", currMode);
 
     // Re-render countries with the updated mode
     searchCountries(allCountriesData);
