@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     data.forEach((country) => {
       const countryCard = document.createElement("a");
       countryCard.classList.add("country-card");
-      countryCard.href = `/detail.html?name=${country.name.common}`;
+      countryCard.href = `detail.html?name=${country.name.common}`;
       countryCard.innerHTML = `
         <img src="${country.flags.svg}" alt="Flag of ${
         country.name.common
